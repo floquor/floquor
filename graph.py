@@ -168,6 +168,10 @@ class GraphExecutor:
             if node.execution_type == NodeExecutionType.TRIGGERED
         }
         for edge in self.graph.route_edges:
+            if edge.source_id not in routes:
+                raise ValueError(
+                    f"node {edge.source_id} is a data node, but has route edges"
+                )
             routes[edge.source_id][edge.source_pin] = edge.target_id
         return routes
 
@@ -243,6 +247,10 @@ class GraphExecutor:
             node_instance = self._get_node_instance(source_id)
             if not target_pin in pins_set:
                 continue
+            if node_instance.output_cache is None:
+                raise ValueError(
+                    f"node {node_id} depends on node {source_id}, but node {source_id} has not been executed yet."
+                )
             result[target_pin] = node_instance.output_cache[source_pin]
         return result
 
