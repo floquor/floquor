@@ -26,8 +26,8 @@ Other versions of Node.JS and Python have not been tested, they may work normall
 ### Build and Run
 ```bash
 # Clone frontend and backend code
-git clone https://github.com/x3bits/floquor.git
-git clone https://github.com/x3bits/floquor-frontend.git
+git clone https://github.com/floquor/floquor.git
+git clone https://github.com/floquor/floquor-frontend.git
 # Build frontend
 cd floquor-frontend
 pnpm install
@@ -50,8 +50,8 @@ python main.py
 ### Build Docker Image and Run
 ```bash
 # Clone frontend and backend code
-git clone https://github.com/x3bits/floquor.git
-git clone https://github.com/x3bits/floquor-frontend.git
+git clone https://github.com/floquor/floquor.git
+git clone https://github.com/floquor/floquor-frontend.git
 # Build image
 docker build -t floquor -f floquor/Dockerfile .
 # Run

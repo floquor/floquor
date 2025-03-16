@@ -26,8 +26,8 @@ Floquor是一个面向开发者的大语言模型的工作流构建工具。
 ### 构建和运行
 ```bash
 # clone前后端代码
-git clone https://github.com/x3bits/floquor.git
-git clone https://github.com/x3bits/floquor-frontend.git
+git clone https://github.com/floquor/floquor.git
+git clone https://github.com/floquor/floquor-frontend.git
 # 打包前端
 cd floquor-frontend
 pnpm install
@@ -50,8 +50,8 @@ python main.py
 ### 构建Docker镜像和运行
 ```bash
 # clone前后端代码
-git clone https://github.com/x3bits/floquor.git
-git clone https://github.com/x3bits/floquor-frontend.git
+git clone https://github.com//floquor.git
+git clone https://github.com/floquor/floquor-frontend.git
 # 构建镜像
 docker build -t floquor -f floquor/Dockerfile .
 # 运行
